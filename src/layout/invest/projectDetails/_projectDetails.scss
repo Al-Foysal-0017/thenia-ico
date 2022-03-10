@@ -1,0 +1,103 @@
+@import '../../../_base.scss';
+
+.project-overview-subtitle {
+   font-weight: 600;
+   font-size: 30px;
+   margin-top: 93px;
+   margin-bottom: 32px;
+}
+
+.project-details {
+   display: flex;
+
+   &__left {
+      flex: 0.3;
+
+      &__title {
+         font-weight: 500;
+         font-size: 16px;
+         padding: 18px 0;
+         color: rgba(255, 255, 255, 0.7);
+         cursor: pointer;
+      }
+   }
+
+   &__leftSmallScreen {
+      display: none;
+   }
+
+   &__right {
+      flex: 0.7;
+
+      &__container {
+         &__title {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 16px;
+         }
+
+         &__subtitle {
+            font-weight: 700;
+            font-size: 17px;
+            opacity: 0.7;
+         }
+
+         &__subtitle2 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 24px;
+            opacity: 0.7;
+         }
+
+         p {
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+         }
+      }
+
+
+   }
+}
+
+// .project-title-active {
+//    background: $secondary;
+// }
+
+
+@media (max-width: $tablet) {
+   .project-details {
+      display: flex;
+      flex-direction: column;
+
+      &__left {
+         display: none;
+      }
+
+      &__leftSmallScreen {
+         flex: 1;
+         display: block;
+         display: flex;
+         flex-wrap: wrap;
+
+         &__title {
+            display: flex;
+            background: $secondary;
+            border-radius: 20px;
+            font-weight: 700;
+            padding: 5px 8px;
+            margin: 5px;
+            cursor: pointer;
+         }
+      }
+
+      &__right {
+         flex: 1;
+
+         &__container {
+            margin-top: 32px;
+         }
+      }
+   }
+}

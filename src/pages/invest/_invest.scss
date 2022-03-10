@@ -1,0 +1,42 @@
+@import "../../base";
+
+.invest {
+  &__bg {
+    background-image: url("../../assets/image/investBg.png");
+    height: 310px;
+    background-attachment: fixed;
+    object-fit: fill;
+    opacity: 0.7;
+  }
+
+  // &__bg {
+  //    background-image: url("../../assets/image/investBg.png");
+  //    height: 400px;
+  //    object-fit: cover;
+  //    opacity: 1;
+  // }
+
+  &__bg-small {
+    background-image: url("../../assets/image/invest-bg-small.png");
+    height: 310px;
+    background-attachment: fixed;
+    object-fit: fill;
+    opacity: 0.5;
+  }
+}
+
+// .invest-bg-naiem{
+//    width: 100%;
+//    position: fixed;
+//    height: 400px;
+//    z-index: -999;
+// }
+
+@media (max-width: $small) {
+  .invest {
+    &__bg-small {
+      height: 240px;
+      opacity: 0.9;
+    }
+  }
+}

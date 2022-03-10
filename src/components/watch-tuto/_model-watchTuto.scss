@@ -1,0 +1,70 @@
+@import "../../base";
+
+.backdrop-watchTuto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 46, 0.8);
+  z-index: 14324234;
+  overflow: auto;
+}
+
+.modal-watchTuto {
+  max-width: 890px;
+  height: 618px;
+  margin: 0 auto;
+  padding: 0;
+  background: #000;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 350px;
+
+  &__cross-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-right: 16px;
+    padding-top: 16px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .modal-watchTuto {
+    width: 80%;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .modal-watchTuto {
+    width: 90%;
+    height: 560px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .modal-watchTuto {
+    width: 95%;
+    height: 450px;
+  }
+}
+@media screen and (max-width: $small) {
+  .modal-watchTuto {
+    height: 350px;
+  }
+}
+
+// @media screen and (max-width: 399px) {
+//   .modal-watchTuto {
+//     width: 320px;
+//   }
+// }
+
+// @media screen and (max-width: 350px) {
+//   .modal-watchTuto {
+//     width: 300px;
+//   }
+// }

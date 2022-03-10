@@ -1,0 +1,125 @@
+@import "../../../_base.scss";
+
+.invest-top {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+
+    img {
+      position: absolute;
+      margin-top: -60px;
+    }
+
+    &__container {
+      margin-left: 192px;
+      margin-top: 24px;
+
+      span {
+        font-weight: 600;
+        font-size: 30px;
+        margin-left: 8px;
+      }
+
+      div {
+        display: flex;
+        margin-top: 18px;
+
+        li {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    &__container {
+      display: flex;
+      align-items: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0px 16px;
+        border-radius: 56px;
+        border: 1px solid #bababa;
+        background: transparent;
+        color: #fff;
+        padding: 12px 32px 12px 32px;
+        cursor: pointer;
+      }
+    }
+
+    &__cont_walt_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 56px;
+      border: 1px solid #bababa;
+      background: transparent;
+      color: #000;
+      background: #fff;
+      padding: 12px 32px 12px 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .invest-top {
+    display: flex;
+    flex-direction: column;
+
+    &__right {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .invest-top {
+    &__right {
+      &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+
+      &__cont_walt_btn {
+        width: 100%;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .invest-top__left {
+    flex-direction: column;
+
+    img {
+      position: absolute;
+      margin-top: -40px;
+      height: 100px;
+      width: 100px;
+    }
+
+    &__container {
+      margin-left: 0;
+      margin-top: 70px;
+    }
+  }
+}

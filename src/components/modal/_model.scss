@@ -1,0 +1,395 @@
+@import "../../base";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 46, 0.8);
+  z-index: 14324234;
+  overflow: auto;
+}
+
+.selectItem {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selectItem img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.modal {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 22px 35px 40px 35px;
+  background: #000;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 350px;
+
+  &__cross-icon {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__titleCont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    &__title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #ffffff;
+      opacity: 0.7;
+    }
+
+    &__subtitle {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 28px;
+      text-align: right;
+      color: #ffffff;
+      opacity: 0.7;
+    }
+  }
+
+  &__inputCont {
+    display: flex;
+    background: #191919;
+    border-radius: 8px;
+
+    &__input {
+      height: 64px;
+      color: #ffffff;
+      background: #191919;
+      border-radius: 8px;
+      text-decoration: none;
+      padding: 0 20px;
+      width: 100%;
+      outline: none;
+      font-weight: 600;
+      font-size: 24px;
+      border: none;
+
+      &__right {
+        display: flex;
+        align-items: center;
+
+        &__paragraph {
+          opacity: 0.7;
+          color: #adb1ff;
+          font-weight: 500;
+          font-size: 12px;
+        }
+
+        &__selectCont {
+          background: #000;
+          padding-left: 12px;
+          padding-right: 7px;
+          border-radius: 4px;
+          margin-right: 20px;
+          margin-left: 7px;
+          display: flex;
+          align-items: center;
+          font-style: 16px;
+          color: #ffffff;
+          font-weight: 500;
+        }
+
+        &__iconDown {
+          font-size: 20px;
+          cursor: pointer;
+          margin-top: 5px;
+          margin-left: 5px;
+        }
+
+        &__selectItemsList {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          margin: 48px 0 0 130px;
+          background: #000;
+          width: 260px;
+          // padding: 8px 12px;
+          border-radius: 4px;
+          box-shadow: 0px 0px 5px rgb(119, 116, 116);
+          //  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          z-index: 999999;
+          // height: 270px;
+          overflow: hidden;
+
+          &__top {
+            &__title {
+              display: flex;
+              justify-content: flex-start;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 20px;
+              letter-spacing: -0.02em;
+              color: rgba(255, 255, 255, 0.5);
+            }
+            &__recommended {
+              display: flex;
+              justify-content: flex-start;
+              margin-top: 12px;
+              padding-bottom: 16px;
+              border-bottom: 1px solid rgb(54, 53, 53);
+
+              &__item {
+                display: flex;
+                align-items: center;
+                margin-right: 3px;
+                padding: 3px 5px 3px 3px;
+                border: 1px solid rgb(61, 60, 60);
+                border-radius: 3px;
+                cursor: pointer;
+              }
+
+              &__img {
+                height: 20px;
+                width: 20px;
+                margin-right: 5px;
+                border-radius: 50%;
+              }
+            }
+          }
+
+          &__selectItem {
+            display: flex;
+            margin: 20px 0;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+              height: 20px;
+              width: 20px;
+              margin-right: 5px;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        &__text {
+          font-weight: 500;
+          font-size: 18px;
+          letter-spacing: -0.02em;
+          margin-right: 20px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__calculateCont {
+    background: #191919;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 20px;
+
+      &__left {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        // opacity: 0.7;
+      }
+
+      &__right {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__inputBtmTxt {
+    display: flex;
+    justify-content: flex-end;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7dffd9;
+    opacity: 0.8;
+    margin-top: 4px;
+  }
+
+  &__chainItemCont {
+    background: rgb(31, 30, 30);
+    margin-top: 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    // padding: 16px 0;
+    overflow: hidden;
+
+    &__chainItem {
+      cursor: pointer;
+      font-size: 16px;
+      padding: 5px 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    height: 48px;
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 56px;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__border {
+    border-bottom: 1px solid #bababa;
+    opacity: 0.3;
+    margin: 0 20px;
+  }
+}
+
+.info-icon-container {
+  display: flex;
+  align-items: center;
+  &__info {
+    font-size: 22px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .modal {
+    width: 400px;
+    &__titleCont {
+      &__title {
+        font-size: 14px;
+        line-height: 24px;
+        opacity: 0.7;
+      }
+      &__subtitle {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+    &__inputCont {
+      &__input {
+        height: 48px;
+        padding: 0 10px;
+        font-size: 16px;
+        &__right {
+          &__paragraph {
+            font-size: 10px;
+          }
+          &__selectCont {
+            margin-right: 10px;
+          }
+          &__selectItemsList {
+            margin: 39px 0 0 60px;
+          }
+          &__text {
+            margin-right: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__calculateCont {
+      &__items {
+        &__left {
+          font-size: 14px;
+        }
+        &__right {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .modal {
+    width: 370px;
+    &__inputCont {
+      &__input {
+        &__right {
+          &__selectItemsList {
+            margin: 40px 0 0 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .modal {
+    width: 320px;
+    &__inputCont {
+      &__input {
+        &__right {
+          &__selectItemsList {
+            margin: 40px 0 0 20px;
+            width: 220px;
+
+            &__top {
+              &__recommended {
+                display: flex;
+                flex-direction: column;
+                margin-top: 12px;
+
+                &__item {
+                  margin-top: 5px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modal {
+    width: 300px;
+    &__inputCont {
+      &__input {
+        &__right {
+          &__selectItemsList {
+            margin: 40px 0 0 0px;
+          }
+        }
+      }
+    }
+  }
+}
